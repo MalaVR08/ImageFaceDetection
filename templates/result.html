@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Detection Result</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width:900px; margin:20px auto; padding:10px; }
+    .images { display:flex; gap:20px; flex-wrap:wrap; }
+    .images img { max-width:420px; border:1px solid #ddd; border-radius:6px; }
+    a.button { display:inline-block; margin-top:12px; padding:8px 14px; background:#1976d2; color:white; text-decoration:none; border-radius:5px; }
+  </style>
+</head>
+<body>
+  <h2>Detection result</h2>
+  <p>Faces found: {{ face_count }}</p>
+
+  <div class="images">
+    <div>
+      <h4>Original</h4>
+      <img src="{{ original_img }}" alt="Original">
+    </div>
+    <div>
+      <h4>Processed</h4>
+      <img src="{{ output_img }}" alt="Processed">
+    </div>
+  </div>
+
+  <p><a class="button" href="{{ url_for('index') }}">Detect another</a></p>
+</body>
+</html>
